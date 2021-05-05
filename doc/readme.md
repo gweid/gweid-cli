@@ -244,10 +244,23 @@ const { promisify } = require('util')
 // promisify 的原理很简单，就是给 download-git-repo 包一层 promise
 const download = promisify(require('download-git-repo'))
 
-
+await download('direct:https://github.com/xxx.git', 'demo', { clone: true })
 ```
 
+- path：模板所在的仓库地址
+- project：需要将下载下来的代码放到哪个文件夹
+- clone：是否使用 clone 方式将项目 download 下来
 
+
+
+download-git-repo 下载的方式有很多种，一般使用以下搭配
+
+- 地址前加 direct
+- clone: 设置为 true
+
+```js
+download('direct:https://github.com/xxx.git', 'demo', { clone: true })
+```
 
 
 
