@@ -234,6 +234,10 @@ program
 
 可以使用 download-git-repo 包去下载 github 的模板：https://www.npmjs.com/package/download-git-repo
 
+vue-cli 也是使用的 download-git-repo，可以查看 vue-cli：https://github.com/vuejs/vue-cli/blob/dev/packages/%40vue/cli/package.json
+
+
+
 基本使用：
 
 ```js
@@ -261,6 +265,12 @@ download-git-repo 下载的方式有很多种，一般使用以下搭配
 ```js
 download('direct:https://github.com/xxx.git', 'demo', { clone: true })
 ```
+
+
+
+## 4、Node 进程 child_process 的使用 
+
+
 
 
 
