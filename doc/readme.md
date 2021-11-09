@@ -68,6 +68,45 @@ gweid-cli
 
 
 
+### 1.3、npm link 调试
+
+将脚手架链接到本地，进行调试：
+
+```shell
+cd gweid-cli
+npm link
+```
+
+
+
+脚手架使用本地包，需要链接本地包：
+
+```shell
+# 先进入本地包根目录，将本地包链接到全局
+cd package
+npm link
+
+# 脚手架链接本地包
+cd gweid-cli
+npm link package
+```
+
+
+
+解除链接：
+
+```shell
+# 解除 gweid-cli 对 package 的链接
+cd gweid-cli
+npm unlink package
+
+# 解除 package 全局链接
+cd package
+npm unlink
+```
+
+
+
 ## 2、Commander
 
 经过上面的初始化，已经可以通过 gcli 输出版本号了，但是这个版本号以及 gcli 命令太死板了。
