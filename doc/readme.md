@@ -105,6 +105,8 @@ cd package
 npm unlink
 ```
 
+本地调试完之后，需要通过 `npm install package` 将 package 安装到 gweid-cli
+
 
 
 ## 2、Commander
